@@ -1,9 +1,15 @@
-import Image from "next/image";
+import Brands from "@/components/HomePage/Brands";
+import HeroSection from "@/components/HomePage/HeroSection";
+import Testimonties from "@/components/HomePage/Testimonties";
+import WhyChoose from "@/components/HomePage/WhyChoose";
 
 export default function Home() {
   return (
-    <div className="">
-      <h1 className="  font-sf font-extrabold">Home</h1>
+    <div>
+      <HeroSection/>
+      <Brands/>
+      <Testimonties/>
+      <WhyChoose/>
     </div>
   );
 }
