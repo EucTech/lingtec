@@ -1,11 +1,15 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @import url("https://fonts.cdnfonts.com/css/sf-pro-display");
+@import url('https://fonts.cdnfonts.com/css/lato');
 
 
 @layer utilities {
   .font-sf {
     font-family: 'SF Pro Display', sans-serif;
+  }
+  .font-lato {
+    font-family: 'Lato', sans-serif;
   }
 }
 
