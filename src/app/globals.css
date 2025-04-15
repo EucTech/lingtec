@@ -8,6 +8,11 @@
     font-family: 'SF Pro Display', sans-serif;
   }
 }
+
+@theme inline {
+  --color-tpurple: #9350E7;
+  --color-tyellow: #CBFC01;
+}
                                                 
 
 @custom-variant dark (&:is(.dark *));
