@@ -14,6 +14,11 @@ import brand5 from "./images/brand5.png";
 import icon1 from "./images/icon1.png";
 import icon2 from "./images/icon2.png";
 import icon3 from "./images/icon3.png";
+import h1 from "./images/h1.png";
+import h2 from "./images/h2.png";
+import h3 from "./images/h3.png";
+import manycolorbg from "./images/manycolorbg.png";
+import faqs from "./images/faqs.png";
 
 export const Images = {
   black_star,
@@ -32,4 +37,9 @@ export const Images = {
   icon1,
   icon2,
   icon3,
+  h1,
+  h2,
+  h3,
+  manycolorbg,
+  faqs,
 };
