@@ -1,4 +1,5 @@
 import Brands from "@/components/HomePage/Brands";
+import FAQs from "@/components/HomePage/FAQs";
 import HeroSection from "@/components/HomePage/HeroSection";
 import HowItWorks from "@/components/HomePage/HowItWorks";
 import JoinOur from "@/components/HomePage/JoinOur";
@@ -14,6 +15,7 @@ export default function Home() {
       <WhyChoose/>
       <HowItWorks/>
       <JoinOur/>
+      <FAQs/>
     </div>
   );
 }
