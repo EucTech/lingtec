@@ -5,7 +5,7 @@ import { Fade } from "react-awesome-reveal";
 
 const WhyChoose = () => {
   return (
-    <div className="w-full flex flex-col items-center justify-center gap-6 md:gap-16 bg-[#fff] py-10 sm:py-20 px-5 sm:px-10 lg:px-20 ">
+    <div className="overflow-hidden w-full flex flex-col items-center justify-center gap-6 md:gap-16 bg-[#fff] py-10 sm:py-20 px-5 sm:px-10 lg:px-20 ">
       <Fade
         damping={0.5}
         triggerOnce
@@ -19,7 +19,7 @@ const WhyChoose = () => {
           <p className="text-[#9350E7] text-[18px] font-[700] font-sf bg-[#E1E1E1]/20 py-1 px-4 rounded-md">
             Why Choose Lingtec
           </p>
-          <h1 className=" w-full md:w-[90%] lg:w-[70%] tracking-tight text-[#141011] font-[700] text-[35px] font-sf">
+          <h1 className=" w-full md:w-[90%] lg:w-[70%] tracking-tight text-[#141011] font-[700] text-[25px] sm:text-[35px] font-sf">
             300+ Languages Across Africa and Asia Now Accessible with a single
             touchbase
           </h1>
