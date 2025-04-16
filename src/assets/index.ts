@@ -5,6 +5,7 @@ import rose_star from "./images/rose-star.png";
 import person1 from "./images/person1.png";
 import person2 from "./images/person2.png";
 import logo from "./images/logo.jpg";
+import logo1 from "./images/logo1.png";
 import hero_img from "./images/hero-img.png";
 import brand1 from "./images/brand1.png";
 import brand2 from "./images/brand2.png";
@@ -28,6 +29,7 @@ export const Images = {
   person1,
   person2,
   logo,
+  logo1,
   hero_img,
   brand1,
   brand2,
