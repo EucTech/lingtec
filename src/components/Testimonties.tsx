@@ -5,7 +5,7 @@ import { Fade } from "react-awesome-reveal";
 
 const Testimonties = () => {
   return (
-    <div className="w-full flex flex-col items-center justify-center bg-[#F9F8FE] text-center font-sf gap-5 py-10 px-5 sm:px-10 md:px-20 lg:px-40 xl:px-60 2xl:px-100">
+    <div className="w-full flex flex-col items-center justify-center bg-[#F9F8FE] text-center font-sf gap-5 py-16 px-5 sm:px-10 md:px-20 lg:px-40 xl:px-60 2xl:px-100">
       <Fade
         damping={0.5}
         triggerOnce

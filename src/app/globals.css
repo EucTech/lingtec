@@ -1,16 +1,16 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@import url("https://fonts.cdnfonts.com/css/sf-pro-display");
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
 @import url('https://fonts.cdnfonts.com/css/lato');
+@import url('https://fonts.cdnfonts.com/css/outfit');
 
 
-@layer utilities {
-  .font-sf {
-    font-family: 'SF Pro Display', sans-serif;
-  }
-  .font-lato {
-    font-family: 'Lato', sans-serif;
-  }
+
+
+@theme inline {
+  --font-sf: 'SF Pro Display', sans-serif;
+  --font-lato: 'Lato', sans-serif;
+  --font-outfit: 'Outfit', sans-serif;
 }
 
 @theme inline {

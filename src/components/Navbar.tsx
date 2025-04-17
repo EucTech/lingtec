@@ -120,7 +120,7 @@ const Navbar = () => {
                 <Link href="#">
                   <Button
                     onClick={closeSheet}
-                    className="flex items-center cursor-pointer bg-tpurple transition-colors duration-300 text-white hover:bg-tcolor-2 px-6! py-5 gap-2 rounded-3xl"
+                    className="flex items-center cursor-pointer bg-tpurple transition-colors duration-300 border-none text-white hover:bg-tcolor-2 px-6! py-5 gap-2 rounded-3xl"
                   >
                     <p className="text-[15px] font-[700]">Get Started </p>
                   </Button>
