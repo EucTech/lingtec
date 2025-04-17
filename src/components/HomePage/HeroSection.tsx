@@ -1,5 +1,6 @@
 import { Images } from "@/assets";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { Fade } from "react-awesome-reveal";
 
@@ -7,11 +8,11 @@ const HeroSection = () => {
   return (
     <section className="w-full min-h-[30em] sm:min-h-[40em] relative flex flex-col items-center justify-center font-sf bg-[#101010] text-white py-20 sm:px-10 px-5 md:px-20  overflow-hidden">
       {/* Background Image */}
-      <div className="absolute w-full h-[24em] bottom-0 bg-[url('/bg-pattern.png')] bg-no-repeat bg-contain"></div>
+      <div className="absolute z-10 w-full h-[24em] bottom-0 bg-[url('/bg-pattern.png')] bg-no-repeat bg-contain"></div>
       {/* Gradient Overlay */}
-      <div className="absolute size-full bg-gradient-to-b from-[#10101000] to-[#10101028]"></div>
+      <div className="absolute z-10 size-full bg-gradient-to-b from-[#10101000] to-[#10101028]"></div>
       <div className="w-full flex flex-col gap-8 items-center justify-center text-center">
-        <div className="flex flex-col items-center justify-center gap-4">
+        <div className="flex flex-col items-center justify-center gap-4 z-30">
           <Fade
             damping={0.5}
             triggerOnce
@@ -66,9 +67,11 @@ const HeroSection = () => {
             direction="up"
             className=""
           >
-            <h3 className=" text-tpurple text-[20px] font-[600] underline">
-              Let&apos;s Chat
-            </h3>
+            <Link href="#">
+              <h3 className="cursor-pointer text-tpurple text-[20px] font-[600] underline">
+                Let&apos;s Chat
+              </h3>
+            </Link>
           </Fade>
         </div>
 
