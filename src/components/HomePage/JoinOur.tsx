@@ -48,7 +48,7 @@ const JoinOur = () => {
   };
 
   return (
-    <div className="bg-[#040207] overflow-hidden w-full h-full font-sf flex flex-col items-center justify-center gap-10 py-10 sm:py-20 sm:px-10 lg:px-20">
+    <div className="bg-[#040207] overflow-hidden w-full h-full font-sf flex flex-col items-center justify-center gap-10 py-10 sm:py-20 px-2 sm:px-10 lg:px-20">
       <Fade
         damping={0.5}
         triggerOnce
@@ -74,9 +74,9 @@ const JoinOur = () => {
         duration={1000}
         delay={100}
         direction="left"
-        className="w-full md:w-[80%] lg:w-[70%] xl:w-[60%]"
+        className="w-full md:w-[80%]"
       >
-        <div className="h-fit flex flex-col bg-[#141515] font-sf border gap-5 border-[#373737] rounded-3xl py-6 px-3 sm:px-6">
+        <div className="h-fit flex flex-col bg-[#141515] font-sf border gap-5 border-[#373737] rounded-3xl py-10 px-3 sm:px-6">
           <div className="flex flex-col items-start gap-1">
             <h2 className="text-[18px] font-[700] text-white">
               How to join our talent pool
@@ -86,7 +86,7 @@ const JoinOur = () => {
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="size-full flex flex-col gap-5">
+          <form onSubmit={handleSubmit} className="size-full flex flex-col gap-8">
             <input
               type="text"
               placeholder="Full Name"
