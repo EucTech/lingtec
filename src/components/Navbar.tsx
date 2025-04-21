@@ -41,10 +41,10 @@ const Navbar = () => {
             <li>Game services</li>
           </Link>
           <Link
-            className={`hover:text-tpurple transition-colors duration-300 ${isActive("/linguistics")}`}
-            href="/linguistics"
+            className={`hover:text-tpurple transition-colors duration-300 ${isActive("/our-services")}`}
+            href="/our-services"
           >
-            <li>Linguistics</li>
+            <li>Our Services</li>
           </Link>
           <Link
             className={`hover:text-tpurple transition-colors duration-300 ${isActive("/about-us")}`}
@@ -91,11 +91,11 @@ const Navbar = () => {
                   </li>
                 </Link>
                 <Link
-                  href="/linguistics"
-                  className={`${isActive("/linguistics")}`}
+                  href="/our-services"
+                  className={`${isActive("/our-services")}`}
                 >
                   <li className="hover:text-tpurple" onClick={closeSheet}>
-                  Linguistics
+                  Our Services
                   </li>
                 </Link>
                 <Link
