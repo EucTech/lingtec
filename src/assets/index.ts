@@ -14,6 +14,8 @@ import brand2 from "./images/brand2.png";
 import brand3 from "./images/brand3.png";
 import brand4 from "./images/brand4.png";
 import brand5 from "./images/brand5.png";
+import brand6 from "./images/brand6.png";
+import brand7 from "./images/brand7.png";
 import icon1 from "./images/icon1.png";
 import icon2 from "./images/icon2.png";
 import icon3 from "./images/icon3.png";
@@ -51,6 +53,8 @@ export const Images = {
   brand3,
   brand4,
   brand5,
+  brand6,
+  brand7,
   icon1,
   icon2,
   icon3,
