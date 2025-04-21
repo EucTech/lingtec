@@ -34,6 +34,7 @@ import l3 from "./images/l3.png";
 import l4 from "./images/l4.png";
 import l5 from "./images/l5.png";
 import l6 from "./images/l6.png";
+import l7 from "./images/l7.png";
 
 
 export const Images = {
@@ -73,4 +74,5 @@ export const Images = {
   l4,
   l5,
   l6,
+  l7,
 };
