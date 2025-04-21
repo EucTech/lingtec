@@ -26,5 +26,13 @@ export const BrandItems: BrandProps[] = [
         id: 5,
         image: Images.brand5.src, 
     },
+    {
+        id: 6,
+        image: Images.brand6.src, 
+    },
+    {
+        id: 7,
+        image: Images.brand7.src, 
+    },
 ]
 
