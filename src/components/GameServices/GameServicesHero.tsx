@@ -1,5 +1,6 @@
 import { Images } from "@/assets";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { Fade } from "react-awesome-reveal";
 
@@ -57,9 +58,11 @@ const GameSericesHero = () => {
             <button className="bg-white Z-50 py-3 px-6 outline-none xl:px-12 text-[#344054] rounded-[10px] text-[16px] cursor-pointer font-[400] hover:bg-white/80 duration-300">
             Get a Qoute
             </button>
+            <Link href="/contact-us">
             <button className="bg-tpurple Z-50 py-3 px-6 outline-none xl:px-12 text-white rounded-[10px] text-[16px] cursor-pointer font-[400] hover:bg-tpurple/80 duration-300">
               Contact Us
             </button>
+            </Link>
           </div>
           </Fade>
         </div>
