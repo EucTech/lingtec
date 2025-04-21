@@ -64,7 +64,7 @@ const GetInTouch = () => {
                 Email Address
               </h2>
               <p className=" text-[#181818]/70 text-[14px] font-[400]">
-                lingtecai@outlook.com
+              support@LingTec.AI
               </p>
             </div>
           </div>
@@ -75,7 +75,7 @@ const GetInTouch = () => {
                 Phone Number
               </h2>
               <p className=" text-[#181818]/70 text-[14px] font-[400]">
-                +1234673638363
+                +2348132758001
               </p>
             </div>
           </div>
