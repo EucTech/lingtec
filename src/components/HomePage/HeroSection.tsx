@@ -67,7 +67,7 @@ const HeroSection = () => {
             direction="up"
             className=""
           >
-            <Link href="#">
+            <Link href="/contact-us">
               <h3 className="cursor-pointer text-tpurple text-[20px] font-[600] underline">
                 Let&apos;s Chat
               </h3>
