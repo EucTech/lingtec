@@ -114,12 +114,11 @@ const JoinOur = () => {
               onChange={(e) => setEmail(e.target.value)}
               className="w-full bg-[#212224] border border-[#D0D5DD4F] font-[400] font-sf placeholder:text-sm placeholder:text-[#929292] py-[8px] outline-none text-[#fff] focus:border-white rounded-xl pl-4"
             />
-            <input
-              type="text"
-              placeholder="Skill"
+            <textarea
+              placeholder="Enter your Skills"
               value={skill}
               onChange={(e) => setSkill(e.target.value)}
-              className="w-full bg-[#212224] border border-[#D0D5DD4F] font-[400] font-sf placeholder:text-sm placeholder:text-[#929292] py-[8px] outline-none text-[#fff] focus:border-white rounded-xl pl-4"
+              className="w-full h-32 bg-[#212224] border border-[#D0D5DD4F] font-[400] font-sf placeholder:text-sm placeholder:text-[#929292] py-[12px] outline-none text-[#fff] focus:border-white rounded-xl pl-4"
             />
 
             {/* Projects Section */}
