@@ -9,19 +9,28 @@ const JoinOur = () => {
   const [email, setEmail] = useState("");
   const [skill, setSkill] = useState("");
   const [loading, setLoading] = useState(false);
+  const [projects, setProjects] = useState<string[]>([]);
+
+  const handleProjectClick = (project: string) => {
+    // Toggle project selection (add/remove project)
+    setProjects((prevSelected) =>
+      prevSelected.includes(project)
+        ? prevSelected.filter((item) => item !== project)
+        : [...prevSelected, project]
+    );
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     try {
-      
       setLoading(true);
       const res = await fetch("/api/waitlist", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ fullname, email, skill }),
+        body: JSON.stringify({ fullname, email, skill, projects }),
       });
       setLoading(false);
       const data = await res.json();
@@ -30,22 +39,21 @@ const JoinOur = () => {
         toast(data.message);
       } else if (res.status === 400) {
         toast(data.message);
-      } else {
-        toast("Error submitting form. Please try again.");
-      }      
+      } 
     } catch (error) {
       toast("Error submitting form. Please try again.");
       console.error("Error submitting form:", error);
       setLoading(false);
-    }
-    finally {
+    } finally {
       setLoading(false);
       setFullname("");
       setEmail("");
       setSkill("");
+      setProjects([]);
     }
-    
   };
+
+  console.log("Selected Projects:", projects);
 
   return (
     <div className="bg-[#040207] overflow-hidden w-full h-full font-sf flex flex-col items-center justify-center gap-10 py-10 sm:py-20 px-2 sm:px-10 lg:px-20">
@@ -62,7 +70,8 @@ const JoinOur = () => {
             Join our Lingtec.ai Talent pool
           </h2>
           <p className="w-full sm:w-[80%] text-[16px] font-[500]">
-            Lingtec.ai is building a network of top talent to work on cutting-edge AI projects for global companies.
+            Lingtec.ai is building a network of top talent to work on
+            cutting-edge AI projects for global companies.
           </p>
         </div>
       </Fade>
@@ -82,11 +91,15 @@ const JoinOur = () => {
               How to join our talent pool
             </h2>
             <p className="text-[14px] font-[500] text-[#787878]">
-              Enter your name, email, and other info and our talent management will reach out to you.
+              Enter your name, email, and other info and our talent management
+              will reach out to you.
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="size-full flex flex-col gap-8">
+          <form
+            onSubmit={handleSubmit}
+            className="size-full flex flex-col gap-8"
+          >
             <input
               type="text"
               placeholder="Full Name"
@@ -109,12 +122,32 @@ const JoinOur = () => {
               className="w-full bg-[#212224] border border-[#D0D5DD4F] font-[400] font-sf placeholder:text-sm placeholder:text-[#929292] py-[8px] outline-none text-[#fff] focus:border-white rounded-xl pl-4"
             />
 
+            {/* Projects Section */}
+            <div className="flex flex-col gap-4">
+              <p className="text-[#929292] text-[13px] sm:text-[15px]">Which of our Projects/ Pools are you interested in?</p>
+              <div className="w-full flex flex-wrap items-center gap-4 ">
+                {["Game Testing", "Data Annotation", "Language Services", "LLM Model Training"].map((project) => (
+                  <div
+                    key={project}
+                    onClick={() => handleProjectClick(project)}
+                    className={`w-[10em] sm:w-[12em] flex items-center justify-center cursor-pointer py-2 px-1 sm:px-2 rounded-xl ${
+                      projects.includes(project) ? "bg-tpurple text-white" : "bg-[#212224] text-[#929292]"
+                    }`}
+                  >
+                    {project}
+                  </div>
+                ))}
+              </div>
+            </div>
+
             <div className="flex flex-col items-center justify-center text-center gap-2">
               <p className="text-[#fff] text-[15px] font-[400]">
-                Clicking <b>&quot;Join&quot;</b> means you&apos;ve agreed to be one
+                Clicking <b>&quot;Join&quot;</b> means you&apos;ve agreed to be
+                one
               </p>
               <p className="w-full sm:w-[85%] lg:w-[60%] text-tpurple text-[15px] font-[400]">
-                of our Lingtec.ai talents under the terms and conditions, and you&apos;re ready for us to serve you.
+                of our Lingtec.ai talents under the terms and conditions, and
+                you&apos;re ready for us to serve you.
               </p>
             </div>
 

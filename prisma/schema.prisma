@@ -6,7 +6,7 @@
 
 generator client {
   provider = "prisma-client-js"
-  // output   = "../src/generated/prisma"
+  output   = "../prisma/generated/prisma"
 }
 
 datasource db {
@@ -17,7 +17,8 @@ datasource db {
 model WaitlistUser {
   id        Int      @id @default(autoincrement())
   email     String   @unique
-  fullname      String
-  skill     String   
+  fullname  String
+  skill     String
+  projects  String[]
   createdAt DateTime @default(now())
 }

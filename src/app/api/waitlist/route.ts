@@ -1,5 +1,6 @@
-import { PrismaClient } from "@prisma/client";
 import { NextResponse } from "next/server";
+// import { PrismaClient } from "@prisma/client";
+import { PrismaClient } from "../../../../prisma/generated/prisma";
 
 
 const prisma = new PrismaClient();
@@ -7,10 +8,17 @@ const prisma = new PrismaClient();
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { fullname, email, skill } = body;
+    const { fullname, email, skill, projects } = body;
 
-    if (!fullname || !email || !skill) {
-      return NextResponse.json({ error: "Missing required fields." }, { status: 400 });
+    if (!fullname ) {
+      return NextResponse.json({ message: "Full name missing." }, { status: 400 });
+    } else if (!email) {
+      return NextResponse.json({ message: "Email missing." }, { status: 400 });
+    } else if (!skill) {
+      return NextResponse.json({ message: "Input your Skill." }, { status: 400 });
+    }
+    else if (!projects || projects.length === 0) {
+      return NextResponse.json({ message: "Please select projects." }, { status: 400 });
     }
 
     const existingUser = await prisma.waitlistUser.findUnique({
@@ -18,7 +26,6 @@ export async function POST(req: Request) {
     });
 
     if (existingUser) {
-      // If user exists, you can either return a message or update the record
       return NextResponse.json(
         { message: 'Email already exists on the waitlist' },
         { status: 400 }
@@ -31,11 +38,12 @@ export async function POST(req: Request) {
         fullname,
         email,
         skill,
+        projects
       },
     });
 
 
-    // console.log("New join request:", { fullname, email, skill });
+    // console.log("New join request:", { fullname, email, skill, projects });
 
     return NextResponse.json({ message: "Success! You've been added to waitlist." }, { status: 201 });
   } catch (error) {

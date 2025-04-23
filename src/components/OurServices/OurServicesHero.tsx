@@ -1,5 +1,6 @@
 import { Images } from "@/assets";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { Fade } from "react-awesome-reveal";
 
@@ -14,54 +15,55 @@ const OurServicesHero = () => {
       <div className="w-full flex lg:flex-row flex-col gap-14 lg:items-start items-center justify-center text-center z-30">
         <div className="flex flex-col items-center justify-center gap-10">
           <Fade
-               damping={0.5}
-               triggerOnce
-               fraction={0.1}
-               duration={1000}
-               delay={100}
-               direction="up"
-               className="w-full lg:w-[60%]"
-             >
-
-          <h1 className="  text-white leading-[1.2] text-[33px] sm:text-[40px] font-[600]">
-            With <span className="bg-gradient-to-r from-[#11FF47] to-[#8e0da883] bg-clip-text text-transparent">Lingtec.ai</span>, your brand gets the attention it deserves.
-          </h1>
-
+            damping={0.5}
+            triggerOnce
+            fraction={0.1}
+            duration={1000}
+            delay={100}
+            direction="up"
+            className="w-full lg:w-[60%]"
+          >
+            <h1 className="  text-white leading-[1.2] text-[33px] sm:text-[40px] font-[600]">
+              With{" "}
+              <span className="bg-gradient-to-r from-[#11FF47] to-[#8e0da883] bg-clip-text text-transparent">
+                Lingtec.ai
+              </span>
+              , your brand gets the attention it deserves.
+            </h1>
           </Fade>
           <Fade
-               damping={0.5}
-               triggerOnce
-               fraction={0.1}
-               duration={1000}
-               delay={200}
-               direction="up"
-               className="w-full sm:[85%]  md:[75%] lg:w-[65%] xl:w-[60%]"
-             >
-          <p className="  text-white font-[500] text-[15px] sm:text-[16px] ">
-            Our AI training services are designed to help organizations train
-            and optimize their AI systems with precision, ensuring your models
-            perform at their best. From LLM model training to speech
-            recognition, our services cater to a wide range of AI needs.
-          </p>
+            damping={0.5}
+            triggerOnce
+            fraction={0.1}
+            duration={1000}
+            delay={200}
+            direction="up"
+            className="w-full sm:[85%]  md:[75%] lg:w-[65%] xl:w-[60%]"
+          >
+            <p className="  text-white font-[500] text-[15px] sm:text-[16px] ">
+              Our AI training services are designed to help organizations train
+              and optimize their AI systems with precision, ensuring your models
+              perform at their best. From LLM model training to speech
+              recognition, our services cater to a wide range of AI needs.
+            </p>
           </Fade>
           <Fade
-               damping={0.5}
-               triggerOnce
-               fraction={0.1}
-               duration={1000}
-               delay={300}
-               direction="up"
-               className=""
-             >
-
-          <button className="bg-[#9450e79c] Z-50 py-3 px-8 sm:px-20 outline-none xl:px-30 text-tyellow rounded-3xl text-[16px] cursor-pointer font-[400] hover:bg-tpurple/80 duration-300">
-            Get a Qoute
-          </button>
+            damping={0.5}
+            triggerOnce
+            fraction={0.1}
+            duration={1000}
+            delay={300}
+            direction="up"
+            className=""
+          >
+            <Link href="/contact-us">
+              <button className="bg-[#9450e79c] Z-50 py-3 px-8 sm:px-20 outline-none xl:px-30 text-tyellow rounded-3xl text-[16px] cursor-pointer font-[400] hover:bg-tpurple/80 duration-300">
+                Get a Qoute
+              </button>
+            </Link>
           </Fade>
         </div>
       </div>
-
-    
 
       <Image
         src={Images.l4}
