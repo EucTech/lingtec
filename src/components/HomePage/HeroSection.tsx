@@ -8,9 +8,19 @@ const HeroSection = () => {
   return (
     <section className="w-full min-h-[30em] sm:min-h-[40em] relative flex flex-col items-center justify-center font-sf bg-[#101010] text-white py-20 sm:px-10 px-5 md:px-20  overflow-hidden">
       {/* Background Image */}
-      <div className="absolute z-10 w-full h-[24em] bottom-0 bg-[url('/bg-pattern.png')] bg-no-repeat bg-contain"></div>
-      {/* Gradient Overlay */}
-      <div className="absolute z-10 size-full bg-gradient-to-b from-[#10101000] to-[#10101028]"></div>
+      <video
+        autoPlay
+        loop
+        muted
+        // playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+      >
+        <source src="/v1.mp4" type="video/mp4" />
+      </video>
+
+      {/* Dark Overlay */}
+      <div className="absolute top-0 left-0 w-full h-full bg-black/90 z-10" />
+
       <div className="w-full flex flex-col gap-8 items-center justify-center text-center">
         <div className="flex flex-col items-center justify-center gap-4 z-30">
           <Fade
@@ -82,14 +92,14 @@ const HeroSection = () => {
           duration={1000}
           delay={400}
           direction="up"
-          className="w-[95%] lg:w-[70%]"
+          className="w-[95%] lg:w-[70%] z-30"
         >
           <Image
             src={Images.hero_img}
             alt="Hero Image"
             width={1000}
             height={1000}
-            className=" mx-auto -mb-20 md:-mb-40"
+            className=" mx-auto -mb-20 md:-mb-40 z-30"
           />
         </Fade>
       </div>
