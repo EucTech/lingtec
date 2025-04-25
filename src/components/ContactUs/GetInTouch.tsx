@@ -16,33 +16,57 @@ const GetInTouch = () => {
     message: "",
   });
 
-  const handleEmail = async (e: React.FormEvent<HTMLFormElement>) => {
+  // const handleEmail = async (e: React.FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault();
+  //   setLoading(true);
+
+  //   try {
+  //     const res = await fetch("/api/contact", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(formData),
+  //     });
+
+  //     if (res.ok) {
+  //       toast("Successfully submitted!");
+  //       setFormData({ name: "", email: "", phone: "", message: "" });
+  //     } else {
+  //       toast("Something went wrong. Try again.");
+  //     }
+  //   } catch (error) {
+  //     toast("Error submitting form.");
+  //     console.error("Submit error:", error);
+  //   } finally {
+  //     setLoading(false);
+  //     setFormData({ name: "", email: "", phone: "", message: "" });
+  //   }
+  // };
+
+  const handleEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
-
+  
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (res.ok) {
-        toast("Successfully submitted!");
-        setFormData({ name: "", email: "", phone: "", message: "" });
-      } else {
-        toast("Something went wrong. Try again.");
-      }
+      const { name, email, phone, message } = formData;
+  
+      const mailtoLink = `mailto:support@lingtec.ai?subject=Message from ${name}&body=${encodeURIComponent(
+        `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`
+      )}`;
+  
+      window.location.href = mailtoLink;
+  
+      toast.success("Opening your mail client...");
+      setFormData({ name: "", email: "", phone: "", message: "" });
     } catch (error) {
-      toast("Error submitting form.");
-      console.error("Submit error:", error);
+      console.error("Mailto error:", error);
+      toast.error("Failed to open mail client.");
     } finally {
       setLoading(false);
-      setFormData({ name: "", email: "", phone: "", message: "" });
     }
   };
+  
 
   return (
     <div className="w-full h-full bg-[#fff] flex flex-col justify-center gap-10 lg:gap-20 py-20 px-5 md:px-20 xl:px-40">
@@ -64,7 +88,7 @@ const GetInTouch = () => {
                 Email Address
               </h2>
               <p className=" text-[#181818]/70 text-[14px] font-[400]">
-              support@LingTec.AI
+              support@lingtec.ai
               </p>
             </div>
           </div>
