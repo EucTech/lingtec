@@ -58,14 +58,16 @@ const LingMarket = ({ onClose }: { onClose?: () => void }) => {
       {isOpen && (
         <div
           ref={popoverRef}
-          className="lg:w-[20em] h-fit absolute font-sf z-20 top-10 left-0 lg:-left-50 lg:right-3 bg-white text-black p-6 rounded-lg shadow-lg"
+          className="lg:w-[20em] h-fit absolute font-lato z-20 top-10 left-0 lg:-left-50 lg:right-3 bg-white text-black p-6 rounded-lg shadow-lg"
         >
-          <h2 className="text-[16px] font-semibold text-wrap">
-            Join the waiting list and earn while shaping the future AI.
+          <h2 className="text-[15px] font-semibold text-wrap">
+            We are building the largest AI data annotation and language service
+            marketplace. Join the waiting list and earn while shaping the future
+            AI and communication
           </h2>
           <button
             onClick={handleClick}
-            className="mt-4 w-full py-2 bg-tpurple text-white rounded-3xl transition-colors duration-300 hover:bg-tcolor-2"
+            className="mt-4 w-full py-2 cursor-pointer bg-tpurple text-white rounded-3xl transition-colors duration-300 hover:bg-tcolor-2"
           >
             Join Now
           </button>
